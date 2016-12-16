@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<urlExclusions>
+		*.jsp,login,logout,scaptcha.png,*.css,*.js,*.gif,*.map
+	</urlExclusions>
+	<httpMethodExclusions></httpMethodExclusions>
+	<tokenTimeout>
+		-1
+	</tokenTimeout>
+	<checkReferer>true</checkReferer>
+	<useCsrfHeader>true</useCsrfHeader>
+	<csrfCookieName>XSRF-TOKEN</csrfCookieName>
+	<csrfHeaderName>X-XSRF-TOKEN</csrfHeaderName>
+	<sessionCheck>
+		<sessionCheckUrlExclusions>
+			home.jsp,login,logout,scaptcha.png,*.css,*.js,*.gif,*.map 
+		</sessionCheckUrlExclusions>
+		<redirectPage>home.jsp</redirectPage>
+		<attributeToCheck>user</attributeToCheck>
+		<send401>true</send401>
+	</sessionCheck>
+	<securityLock>
+		<dbJndiName>jdbc/mail</dbJndiName>
+		<triesToLock>5</triesToLock>
+		<timeToLockMin>2</timeToLockMin>
+	</securityLock>
+</config>
